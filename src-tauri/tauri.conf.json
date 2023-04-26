@@ -1,0 +1,69 @@
+{
+    "build": {
+        "beforeDevCommand": "npm run dev",
+        "beforeBuildCommand": "npm run build",
+        "devPath": "http://localhost:1420",
+        "distDir": "../dist",
+        "withGlobalTauri": false
+    },
+    "package": {
+        "productName": "customize_vim",
+        "version": "0.0.0"
+    },
+    "tauri": {
+        "allowlist": {
+            "all": false,
+            "shell": {
+                "all": false,
+                "open": true
+            },
+            "path": {
+                "all": true 
+            },
+            "fs":{
+            "all":true,
+                "readDir": true,
+                "scope": [
+                   "*//*"
+                ],
+                "exists": true
+            },
+            "window": {
+                "all": false,
+                "close": true,
+                "hide": true,
+                "show": true,
+                "maximize": true,
+                "minimize": true,
+                "unmaximize": true,
+                "unminimize": true,
+                "startDragging": true
+            }
+        },
+        "bundle": {
+            "active": true,
+            "icon": [
+                "icons/AppIcon.png",
+                "icons/AppIcon.ico"
+            ],
+            "identifier": "customize-vim",
+            "targets": "all"
+        },
+        "security": {
+            "csp": null
+        },
+        "updater": {
+            "active": false
+        },
+        "windows": [
+            {
+                "fullscreen": false,
+                "decorations": false,
+                "resizable": true,
+                "title": "customize_vim",
+                "width": 800,
+                "height": 600
+            }
+        ]
+    }
+}
