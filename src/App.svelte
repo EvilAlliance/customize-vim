@@ -4,29 +4,34 @@
     import Menu from "./Component/FilePicker/Menu.svelte";
 </script>
 
+<main>
+    <TittleBar />
+    <section>
+        <Menu />
+    </section>
+</main>
+
 <style>
-    :global(*){
+    :global(*) {
         box-sizing: border-box;
     }
     :global(div#app) {
         height: 100dvh;
-        background:#10002B;
+        background: #10002b;
         margin: 0;
     }
-
     :global(body) {
         margin: 0;
     }
-
-    section{
-        display:flex;
+    main {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 30px 1fr;
+    }
+    section {
+        display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
     }
 </style>
-
-<TittleBar/>
-<section>
-    <Menu/>
-</section>
